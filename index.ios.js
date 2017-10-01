@@ -13,7 +13,7 @@ import {
   View,
   Image
 } from 'react-native';
-//var SunCalc = require('suncalc');
+import MapView from 'react-native-maps'
 
 import sunriseStr from './test'
 
@@ -23,12 +23,18 @@ export default class SunsetApp extends Component {
 
         <Image source={require('./Pictures/background.jpg')}
                 style={styles.container}>
-        <Text style={styles.sunsetTime}>
-          {sunriseStr}
+        <Text style={styles.regular}>
+           The sun sets tonight at:
         </Text>
-        <Text style={styles.instructions}>
 
+
+        <Text style={styles.sunsetTime}>
+           {sunriseStr}
         </Text>
+
+
+
+
         </Image>
 
     );
@@ -49,13 +55,23 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
     color: 'white',
-    marginTop: 220
+    marginTop: 40,
+    fontWeight: 'bold'
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+
   },
+  regular: {
+    fontSize: 24,
+    textAlign: 'center',
+    color: 'white',
+    marginTop: 200,
+    fontWeight: 'bold'
+
+  }
 });
 
 AppRegistry.registerComponent('SunsetApp', () => SunsetApp);
