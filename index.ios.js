@@ -23,7 +23,7 @@ export default class SunsetApp extends Component {
 
         <Image source={require('./Pictures/background.jpg')}
                 style={styles.container}>
-        <Text style={styles.welcome}>
+        <Text style={styles.sunsetTime}>
           {sunriseStr}
         </Text>
         <Text style={styles.instructions}>
@@ -44,8 +44,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'transparent',
   },
-  welcome: {
-    fontSize: 20,
+  sunsetTime: {
+    fontSize: 60,
     textAlign: 'center',
     margin: 10,
     color: 'white',
