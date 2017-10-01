@@ -3,6 +3,7 @@
  * https://github.com/facebook/react-native
  * @flow
  */
+ 'use strict'
 
 import React, { Component } from 'react';
 import {
@@ -12,6 +13,9 @@ import {
   View,
   Image
 } from 'react-native';
+//var SunCalc = require('suncalc');
+
+import sunriseStr from './test'
 
 export default class SunsetApp extends Component {
   render() {
@@ -20,6 +24,9 @@ export default class SunsetApp extends Component {
         <Image source={require('./Pictures/background.jpg')}
                 style={styles.container}>
         <Text style={styles.welcome}>
+          {sunriseStr}
+        </Text>
+        <Text style={styles.instructions}>
           Pollution causes those prettier sunsets.
         </Text>
         </Image>
