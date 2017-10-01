@@ -14,8 +14,7 @@ import {
   Image
 } from 'react-native';
 import MapView from 'react-native-maps'
-
-import sunriseStr from './test'
+var SunCalc = require('suncalc');
 
 export default class SunsetApp extends Component {
   state = {
@@ -89,10 +88,8 @@ export default class SunsetApp extends Component {
         <Text style={styles.regular}>
            The sun sets tonight at:
         </Text>
-
-
         <Text style={styles.sunsetTime}>
-           {sunriseStr}
+          {((SunCalc.getTimes(new Date(), this.state.lastLat, this.state.lastLong).sunsetStart.getHours() - 12) + ':' + (SunCalc.getTimes(new Date(), this.state.lastLat, this.state.lastLong).sunset.getMinutes() + 'pm'))}
         </Text>
 
         <Text>
