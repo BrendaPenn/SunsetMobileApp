@@ -27,7 +27,7 @@ export default class SunsetApp extends Component {
           {sunriseStr}
         </Text>
         <Text style={styles.instructions}>
-          Pollution causes those prettier sunsets.
+
         </Text>
         </Image>
 
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
     color: 'white',
+    marginTop: 220
   },
   instructions: {
     textAlign: 'center',
