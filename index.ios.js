@@ -97,6 +97,8 @@ export default class SunsetApp extends Component {
 
         <Text>
           {this.state.lastLat + 0.00050}
+        </Text>
+        <Text>
           {this.state.lastLong + 0.00050}
         </Text>
         </Image>
