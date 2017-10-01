@@ -95,12 +95,8 @@ export default class SunsetApp extends Component {
            {sunriseStr}
         </Text>
 
-        <Text>
-          {this.state.lastLat + 0.00050}
-        </Text>
-        <Text>
-          {this.state.lastLong + 0.00050}
-        </Text>
+
+
         </Image>
 
     );
@@ -117,7 +113,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   sunsetTime: {
-    fontSize: 60,
+    fontSize: 70,
     textAlign: 'center',
     margin: 10,
     color: 'white',
