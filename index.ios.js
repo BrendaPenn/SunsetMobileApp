@@ -10,7 +10,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 //var SunCalc = require('suncalc');
 
@@ -19,18 +20,17 @@ import sunriseStr from './test'
 export default class SunsetApp extends Component {
   render() {
     return (
-      <View style={styles.container}>
+
+        <Image source={require('./Pictures/background.jpg')}
+                style={styles.container}>
         <Text style={styles.welcome}>
           {sunriseStr}
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit index.ios.js
+          Pollution causes those prettier sunsets.
         </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+        </Image>
+
     );
   }
 }
@@ -38,14 +38,17 @@ export default class SunsetApp extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: undefined,
+    height: undefined,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'transparent',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+    color: 'white',
   },
   instructions: {
     textAlign: 'center',
