@@ -92,11 +92,10 @@ export default class SunsetApp extends Component {
           {((SunCalc.getTimes(new Date(), this.state.lastLat, this.state.lastLong).sunsetStart.getHours() - 12) + ':' + (SunCalc.getTimes(new Date(), this.state.lastLat, this.state.lastLong).sunset.getMinutes() + 'pm'))}
         </Text>
 
+
         <Text>
-          {this.state.lastLat + 0.00050}
-        </Text>
-        <Text>
-          {this.state.lastLong + 0.00050}
+          {this.state.lastLat}
+          {this.state.lastLong}
         </Text>
         </Image>
 
@@ -114,7 +113,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   sunsetTime: {
-    fontSize: 60,
+    fontSize: 70,
     textAlign: 'center',
     margin: 10,
     color: 'white',
